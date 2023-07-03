@@ -14,23 +14,110 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content="Giallo is an elegant landing page template for micro SaaS products built with AstroJS & Skeleton CSS"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
 		<title>{title}</title>
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
-<style is:global>
+<style lang="scss" is:global>
+	@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
+
 	:root {
-		--accent: 124, 58, 237;
+		--accent: #F2EBE0;
+		--btn-color: #e5f4fb;
+		--btn-primary: #cc4b06;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+		--font-family: 'Manrope', sans-serif;
+		--header-family: 'Archivo Black', sans-serif;
 	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
+	html, body {
+		margin: 0px;
+		background-color: #eee9df;
+		overflow-x: hidden;
 	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
+
+	.button{
+		border-radius: 50px;
+		text-transform: none;
+		font-size: 1.8rem;
+		font-weight: 400;
+		&.button-primary, &.button-primary:hover{
+			background-color: var(--btn-primary);
+			color: var(--btn-color);
+			border-color: var(--btn-primary);;
+		}
 	}
+	input, .button{
+		height: 50px !important;
+		line-height: 45px;
+	}
+
+	.text-container{
+		max-width: 600px;
+		margin: 20px auto;
+	}
+
+	.center{
+		text-align: center;
+	}
+
+	section.padded{
+		padding: 90px 0;
+	}
+	p{
+		font-size: 2rem;
+	}
+
+	.h1-title, .h2-title, .h3-title{
+		font-weight: 600;
+		font-family: var(--header-family);
+	}
+	.h1-title{
+		font-size: 5.8rem;
+	}
+	.h2-title{
+		font-size: 4.4rem;
+	}
+	.h3-title{
+		font-size: 2.4rem;
+	}
+
+	input, ::placeholder{
+		font-size: 2rem;
+	}
+	
+
+	.content-form{
+        background-color: #fff;
+        padding: 5px;
+        border-radius: 50px;
+        border: 2px solid #ddd;
+        input, input:focus{
+            border: none;
+            padding-left: 20px;
+            border-radius: 50px;
+        }
+        input, button, .button{
+            margin-bottom: 0px;
+        }
+    }
+
+
+	@media (max-width:700px) {
+		.h1-title{
+			font-size: 4rem;
+		}
+		.h2-title{
+			font-size: 3rem;
+		}
+		.content-form{
+			border-radius: 20px;
+		}
+	}
+
+
 </style>

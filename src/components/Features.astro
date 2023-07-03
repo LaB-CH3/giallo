@@ -1,0 +1,137 @@
+---
+import CardOne from '../assets/card-one.svg'
+import CardTwo from '../assets/card-two.svg'
+import CardThree from '../assets/card-three.svg'
+import CardFour from '../assets/card-four.svg'
+import CardFive from '../assets/card-five.svg'
+import CardSix from '../assets/card-six.svg'
+import CardSeven from '../assets/card-seven.svg'
+import CardEight from '../assets/card-eight.svg'
+---
+
+
+
+<section class="product-feature">
+    <div class="container">
+
+        <div class="feature-list card-number-one">
+            <div class="center">
+                <small>collaboration</small>
+               <h2 class="h2-title">All your creative assets, perfectly organized</h2>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nihil atque, exercitationem itaque, in nobis eos vel voluptas, ab omnis ea maiores recusandaet quisquam?</p>
+            </div>
+            <div class="feature-cards row">
+                <div class="one-half column right">
+                    <img src={CardOne} alt="Card 1">
+                </div>
+                <div class="one-half column multi-cards left">
+                    <img src={CardTwo} alt="Card 2">
+                    <img src={CardThree} alt="Card 3" class="round">
+                    <img src={CardEight} alt="Card 8" class="round">
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-list card-number-two">
+            <div class="center">
+                <small>payments</small>
+               <h2 class="h2-title">Make payments your superpower.</h2>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nihil atque, exercitationem itaque, in nobis eos vel voluptas, ab omnis ea maiores recusandaet quisquam?</p>
+            </div>
+            <div class="feature-cards row">
+                <div class="one-half column multi-cards right">
+                    <img src={CardSeven} class="has-border" alt="Card 7">
+                    <img src={CardSix} alt="Card 6" class="round">
+                    <img src={CardFour} alt="Card 4" class="round">
+                </div>
+                <div class="one-half column left">
+                    <img src={CardFive} alt="Card 5">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<style lang="scss">
+
+
+.product-feature{
+    background-color: #ecf7f8;
+    padding: 10px 0 90px 0;
+    .feature-list {
+        margin-top: 140px;
+    }
+    .feature-cards{
+        padding-top: 40px;
+    }
+
+    .h2-title, p{
+        margin: 20px auto;
+    }
+    .h2-title{
+        max-width: 600px;
+    }
+    p{
+        max-width: 700px;
+    }
+    small{
+        text-transform: uppercase;
+        font-weight: 900;
+        color: #717171;
+        font-size: 1.5rem;
+    }
+
+     img{
+        width: 320px;
+        border-radius: 20px;
+        &.round{
+            border-radius: 50px;
+        }
+        &:not(.has-border){
+            border: 1px solid #ddd;
+
+        }
+    }
+  
+    .right{
+        text-align: right;
+    }
+    .left{
+        text-align: left;
+    }
+
+
+    .card-number-one .multi-cards img{
+        margin: 15px 0;
+       &:nth-child(1){
+        transform: rotate(-2deg);
+       }
+        &:nth-child(3){
+        transform: rotate(10deg);
+       }
+    }
+    .card-number-two .multi-cards img{
+        margin: 15px 0;
+       &:nth-child(1){
+        transform: rotate(-2deg);
+       }
+        &:nth-child(3){
+        transform: rotate(10deg);
+       }
+    }
+
+
+    @media (max-width:700px) {
+      img{
+        width: 250px;
+      }
+      .right, .left{
+        text-align: center;
+      }
+   }
+}
+
+
+
+</style>

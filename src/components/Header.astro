@@ -1,0 +1,63 @@
+---
+import Logo from '../assets/logodark.svg'
+---
+
+
+
+<header>
+    <nav class="container">
+        <div class="row">
+            <div class="one-half column">
+                <a href="#" class="nav-logo">
+                    <img src={Logo} alt="Brand logo">
+                </a>
+            </div>
+            <div class="one-half column">
+                <div class="nav-cta u-pull-right">
+                  <a href="#">Log in</a>
+                  <a href="#" class="button button-primary">Sign up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<style lang="scss">
+
+
+
+nav{
+    position: absolute;
+    width: 100%;
+    top: 10px;
+    background-color: #fff;
+    border-radius: 50px;
+    .row{
+        padding: 15px;
+    }
+    a:not(.button){
+        padding: 10px;
+        color: #111;
+        font-size: 1.8rem;
+    }
+    a, .button{
+        margin: 0px;
+        text-decoration: none;
+    }
+    .nav-logo img{
+        width: 90px;
+        margin-top: 10px;
+    }
+
+    @media (max-width:700px) {
+        .nav-logo img{
+            margin-left: -10px;
+        }
+        .nav-cta{
+            position: absolute;
+            right: 10px; top: 10px;
+        }
+    }
+}
+</style>
