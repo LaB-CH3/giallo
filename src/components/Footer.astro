@@ -1,21 +1,23 @@
 ---
 import LinkedIn from '../assets/linkedin.svg'
 import Twitter from '../assets/twitter.svg'
+const link = `https://github.com/LaB-CH3/giallo`
+
 ---
 
 <footer>
     <div class="container row">
         <div class="footer-link flex js one-half column">
-            <a href="#">About</a> <a href="#">Help Center</a>
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a> 
+            <a href={link}>About</a> <a href={link}>Help Center</a>
+            <a href={link}>Privacy</a>
+            <a href={link}>Terms</a> 
         </div>
         <div class="footer-note one-half column">
             <div class="u-pull-right">
                 <div class="flex">
                     <p>© Giallo</p>
-                    <a href="#"><img src={Twitter} alt="Twitter icon"></a>
-                    <a href="#"><img src={LinkedIn} alt="Linkedin icon"></a>
+                    <a href={link}><img src={Twitter} alt="Twitter icon"></a>
+                    <a href={link}><img src={LinkedIn} alt="Linkedin icon"></a>
                 </div>
             </div>
         </div>

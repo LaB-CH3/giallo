@@ -1,5 +1,6 @@
 ---
 import Logo from '../assets/logodark.svg'
+const link = `https://github.com/LaB-CH3/giallo`
 ---
 
 
@@ -8,14 +9,14 @@ import Logo from '../assets/logodark.svg'
     <nav class="container">
         <div class="row">
             <div class="one-half column">
-                <a href="#" class="nav-logo">
+                <a href={link} class="nav-logo">
                     <img src={Logo} alt="Brand logo">
                 </a>
             </div>
             <div class="one-half column">
                 <div class="nav-cta u-pull-right">
-                  <a href="#">Log in</a>
-                  <a href="#" class="button button-primary">Sign up</a>
+                  <a href={link} >Log in</a>
+                  <a href={link} class="button button-primary">Sign up</a>
                 </div>
             </div>
         </div>
